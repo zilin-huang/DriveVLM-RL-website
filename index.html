@@ -6,14 +6,19 @@
         content="DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving.">
   <meta name="keywords" content="DriveVLM-RL, Vision-Language Models, Reinforcement Learning, Autonomous Driving, CARLA, VLM-as-Reward">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DriveVLM-RL</title>
+  <title>DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJ0598HS6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
+
     gtag('config', 'G-YXJ0598HS6');
   </script>
 
@@ -27,24 +32,13 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" type="image/png" href="./static/images/DriveVLM-RL%20logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-
-  <style>
-    .accent { color: #3b5bdb; }
-    .results-table { font-size: 0.86rem; margin: 0 auto; }
-    .results-table td, .results-table th { vertical-align: middle; text-align: center; padding: 0.35em 0.55em; }
-    .results-table tr.ours { background: #eef2ff; font-weight: 600; }
-    .results-table .best { font-weight: 700; }
-    .fig-caption { font-size: 0.95rem; color: #555; margin-top: 0.6rem; }
-    .tag-pill { background:#eef2ff; color:#3b5bdb; border-radius:999px;
-                padding:.15rem .85rem; font-weight:600; font-size:.85rem; display:inline-block; margin:.2rem; }
-  </style>
 </head>
 <body>
 
@@ -59,16 +53,35 @@
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://zilin-huang.github.io/">
-        <span class="icon"><i class="fas fa-home"></i></span>
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
       </a>
+
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">More Research</a>
+        <a class="navbar-link">
+          More Research
+        </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/zihaosheng/VLM-RL">VLM-RL</a>
-          <a class="navbar-item" href="https://zilin-huang.github.io/">Author homepage</a>
+          <a class="navbar-item" href="https://zilin-huang.github.io/HAIM-DRL-website/">
+            HAIM-DRL
+          </a>
+          <a class="navbar-item" href="https://zilin-huang.github.io/PE-RLHF-website/">
+            PE-RLHF
+          </a>
+          <a class="navbar-item" href="https://zilin-huang.github.io/VLM-RL-website/">
+            VLM-RL
+          </a>
+          <a class="navbar-item" href="https://zilin-huang.github.io/Sim2Real-AD-website/">
+            Sim2Real-AD
+          </a>
+          <a class="navbar-item" href="https://www.huang-zilin.com/Sky-Drive-website/">
+            Sky-Drive
+          </a>
         </div>
       </div>
     </div>
+
   </div>
 </nav>
 
@@ -78,19 +91,28 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DriveVLM-RL</h1>
-          <h2 class="subtitle is-4" style="margin-top:-0.5rem;">
-            Neuroscience-Inspired Reinforcement Learning with Vision-Language Models<br>
-            for Safe and Deployable Autonomous Driving
-          </h2>
+          <h1 class="title is-1 publication-title">
+            <span style="display:inline-flex; align-items:center; gap:0.6rem;">
+              <img src="./static/images/DriveVLM-RL%20logo.png" alt="DriveVLM-RL logo"
+                   style="width:88px; height:auto;">DriveVLM-RL:
+            </span>
+            <br>Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving
+          </h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=RgO7ppoAAAAJ">Zilin Huang</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=3T-SILsAAAAJ">Zihao Sheng</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=6m8LnLUAAAAJ">Zhengyang Wan</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=hIt7KnUAAAAJ">Yansong Qu</a><sup>2</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=wIGL3SQAAAAJ">Junwei You</a><sup>1</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=DnbKEM4AAAAJ">Sicong Jiang</a><sup>3</sup>,</span>
-            <span class="author-block"><a href="https://scholar.google.com/citations?user=DPN2wc4AAAAJ">Sikai Chen</a><sup>1</sup><sup>*</sup></span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=RgO7ppoAAAAJ">Zilin Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=3T-SILsAAAAJ">Zihao Sheng</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=6m8LnLUAAAAJ">Zhengyang Wan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=hIt7KnUAAAAJ">Yansong Qu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=wIGL3SQAAAAJ">Junwei You</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=DnbKEM4AAAAJ">Sicong Jiang</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=DPN2wc4AAAAJ">Sikai Chen</a><sup>1</sup><sup>*</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -98,27 +120,49 @@
             <span class="author-block"><sup>2</sup>Purdue University,</span>
             <span class="author-block"><sup>3</sup>McGill University</span>
           </div>
+
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>*</sup>Corresponding author</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
+              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2603.18315" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a>
+                <a href="https://arxiv.org/pdf/2603.18315"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2603.18315" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span></a>
+                <a href="https://arxiv.org/abs/2603.18315"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
               </span>
+              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/zilin-huang/DriveVLM-RL" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+                <a href="https://github.com/zilin-huang/DriveVLM-RL"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
               </span>
+              <!-- Checkpoints Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/zilinhuang/DriveVLM-RL" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">🤗</span><span>Checkpoints</span></a>
+                <a href="https://huggingface.co/zilinhuang/DriveVLM-RL"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">🤗</span>
+                  <span>Checkpoints</span>
+                  </a>
               </span>
             </div>
           </div>
@@ -129,14 +173,55 @@
 </section>
 
 
-<section class="hero teaser">
+<section class="section" style="padding-top:0;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/fig1_paradigms.png" alt="Comparative learning paradigms for autonomous driving"/>
-      <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
-        <span class="accent">DriveVLM-RL</span> uses VLMs as semantic <i>teachers</i> during training through a
-        dual-pathway reward, then runs with <b>zero VLM latency</b> at deployment.
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <video controls playsinline style="width:100%; border-radius:10px;">
+          <source src="./static/videos/drivevlm_rl_overview.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h2 class="subtitle has-text-centered" style="margin-top:1.2rem;">
+          To the best of our knowledge, <b>DriveVLM-RL</b> is the
+          <span style="color:hsl(204, 86%, 53%);">first framework</span> to explicitly integrate the human brain's
+          <span style="color:hsl(204, 86%, 53%);">dual-pathway cognitive architecture</span> into the
+          <span style="color:hsl(204, 86%, 53%);">VLM-as-Reward paradigm</span> for autonomous driving.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">🤩 Highlights</h2>
+      <img src="./static/images/Fig1.jpg" alt="Comparative learning paradigms for autonomous driving"/>
+      <div class="content is-size-5" style="margin-top:1.5rem;">
+        <p>
+          <b>1. Dual-Pathway VLM-Guided RL.</b> A <b>Static Pathway</b> (CLIP with fixed language goals) and a
+          <b>Dynamic Pathway</b> (attention-gated LVLM reasoning) bring
+          <span style="color:hsl(204, 86%, 53%);">human-like semantic reasoning</span> to AV safety, beyond collision-based
+          rewards.
+        </p>
+        <p>
+          <b>2. Attention-Gated Efficiency.</b> A lightweight detector triggers costly LVLM inference
+          <span style="color:hsl(204, 86%, 53%);">only for safety-critical frames</span>, and all VLMs are
+          <span style="color:hsl(204, 86%, 53%);">removed at deployment</span> for real-time control.
+        </p>
+        <p>
+          <b>3. Hierarchical Reward &amp; Async Training.</b> Static similarity, dynamic multi-frame reasoning, and
+          vehicle state fuse into <span style="color:hsl(204, 86%, 53%);">dense, proactive rewards</span>, with async training
+          decoupling VLM inference from environment interaction.
+        </p>
+        <p>
+          <b>4. State-of-the-Art Safety.</b> Cuts collision severity from
+          <span style="color:hsl(204, 86%, 53%);">10.09 to 1.75 km/h</span> over the strongest VLM baseline, and stays safe
+          under <span style="color:hsl(204, 86%, 53%);">no-reward-after-collision</span> and
+          <span style="color:hsl(204, 86%, 53%);">unseen towns</span>.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -144,105 +229,77 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Ensuring safe decision-making in autonomous vehicles remains a fundamental challenge despite rapid
-            advances in end-to-end learning. Traditional reinforcement learning (RL) relies on hand-engineered
-            rewards or sparse collision signals that fail to capture the contextual understanding required for safe
-            driving, making unsafe exploration unavoidable. Vision-language models (VLMs) offer rich semantic
-            understanding, but their high inference latency and susceptibility to hallucination hinder direct
-            application to real-time control.
-          </p>
-          <p>
-            We propose <b>DriveVLM-RL</b>, a neuroscience-inspired framework that integrates VLMs into RL through a
-            <b>dual-pathway</b> architecture. Inspired by the human brain's habitual and deliberative visual
-            processing, it decomposes semantic reward learning into a <b>Static Pathway</b> for continuous spatial
-            safety assessment via CLIP-based contrasting language goals, and a <b>Dynamic Pathway</b> for
-            attention-gated multi-frame semantic risk reasoning via a lightweight detector and a large VLM (LVLM). A
-            hierarchical reward synthesis mechanism fuses these signals with vehicle state, and an asynchronous
-            training pipeline decouples expensive LVLM inference from environment interaction. Critically, <b>all VLM
-            components operate only during training and are completely removed at deployment</b>, eliminating
-            inference latency at test time.
-          </p>
-          <p>
-            Extensive CARLA experiments show DriveVLM-RL significantly outperforms state-of-the-art baselines in
-            collision avoidance and task success, attaining the highest success rate while reducing collision
-            severity from <b>10.09 to 1.75&nbsp;km/h</b> relative to the strongest VLM-based baseline. Even under
-            extreme "no-reward-after-collision" settings, it maintains low collision rates through semantic risk
-            reasoning alone, and under distribution shift across unseen towns and traffic densities it yields the
-            lowest collision severity in every out-of-distribution town.
-          </p>
-        </div>
-        <div class="has-text-centered">
-          <span class="tag-pill">Dual-pathway reward</span>
-          <span class="tag-pill">CLIP + Qwen3-VL</span>
-          <span class="tag-pill">Attention gating</span>
-          <span class="tag-pill">Zero VLM latency at deployment</span>
-          <span class="tag-pill">CARLA</span>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-
-<section class="section" style="padding-top:0;">
-  <div class="container is-max-desktop">
 
     <!-- Motivation. -->
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3">Neuroscience-Inspired Motivation</h2>
-        <img src="./static/images/fig2_neuroscience.png" alt="Neuroscience-inspired motivation"/>
-        <p class="fig-caption">
-          Routine scenes are handled by a fast habitual pathway, while safety-critical situations trigger selective
-          attention and higher-level semantic reasoning in the prefrontal cortex, motivating DriveVLM-RL's
-          dual-pathway reward design.
-        </p>
+        <img src="./static/images/Fig2.jpg" alt="Neuroscience-inspired motivation"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            Routine scenes are handled by a fast habitual pathway, while safety-critical situations trigger
+            selective attention and higher-level semantic reasoning in the prefrontal cortex, motivating
+            DriveVLM-RL's dual-pathway reward design.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Framework. -->
-    <div class="columns is-centered" style="margin-top:1rem;">
+    <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3">Framework Overview</h2>
-        <img src="./static/images/fig3_overview.png" alt="DriveVLM-RL framework overview"/>
-        <p class="fig-caption">
-          <b>(a) Static Pathway</b>: CLIP-based semantic alignment with contrasting language goals for continuous
-          spatial safety. <b>(b) Dynamic Pathway</b>: an attention gate triggers multi-frame LVLM reasoning only in
-          safety-critical situations. <b>(c) Hierarchical reward synthesis</b>: static and dynamic signals are fused
-          with vehicle-state factors. <b>(d) Asynchronous pipeline</b>: reward computation is decoupled from
-          environment interaction and policy learning.
-        </p>
+        <img src="./static/images/Fig4.jpg" alt="DriveVLM-RL framework overview"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            <b>(a) Static Pathway</b>: CLIP-based semantic alignment with contrasting language goals for continuous
+            spatial safety. <b>(b) Dynamic Pathway</b>: an attention gate triggers multi-frame LVLM reasoning only in
+            safety-critical situations. <b>(c) Hierarchical reward synthesis</b>: static and dynamic signals are
+            fused with vehicle-state factors. <b>(d) Asynchronous pipeline</b>: reward computation is decoupled from
+            environment interaction and policy learning.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Attention gate. -->
-    <div class="columns is-centered" style="margin-top:1rem;">
+    <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3">Attention-Gated Dynamic Reward</h2>
-        <img src="./static/images/fig4_attention_gate.png" alt="Attention-gated dynamic reward generation"/>
-        <p class="fig-caption">
-          Routine frames bypass semantic reasoning; safety-critical frames trigger multi-frame LVLM inference to
-          produce a risk description, which is converted into a dynamic reward via CLIP-based semantic similarity.
-        </p>
+        <img src="./static/images/Fig3.jpg" alt="Attention-gated dynamic reward generation"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            Routine frames bypass semantic reasoning; safety-critical frames trigger multi-frame LVLM inference to
+            produce a risk description, which is converted into a dynamic reward via CLIP-based semantic similarity.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARLA towns. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">CARLA Towns</h2>
+        <img src="./static/images/towns.jpg" alt="CARLA towns"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            CARLA towns used to evaluate cross-town generalization.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Observations. -->
-    <div class="columns is-centered" style="margin-top:1rem;">
+    <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
         <h2 class="title is-3">Multi-Modal Observations</h2>
-        <img src="./static/images/fig5_observations.png" alt="Multi-modal observations"/>
-        <p class="fig-caption">
-          Ego-vehicle observations in urban traffic: BEV representation, semantic segmentation, and camera views
-          with diverse traffic participants.
-        </p>
+        <img src="./static/images/Fig5.jpg" alt="Multi-modal observations"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            Ego-vehicle observations in urban traffic: BEV representation, semantic segmentation, and camera views
+            with diverse traffic participants.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -250,76 +307,51 @@
 </section>
 
 
-<section class="section" style="padding-top:0;">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
         <h2 class="title is-3">Results</h2>
-        <p class="content is-size-6" style="margin-bottom:1.2rem;">
-          Mean ± std over 3 seeds. <b>AS</b>: avg. speed, <b>TD</b>: travel distance (m), <b>RC</b>: route
-          completion, <b>SR</b>: success rate, <b>CS</b>: collision speed (severity; lower is safer).
-        </p>
-
-        <h3 class="title is-5">Main comparison (CARLA Town02, in-distribution)</h3>
-        <div class="table-container">
-          <table class="table is-bordered is-striped results-table">
-            <thead><tr>
-              <th>Method</th><th>Venue</th><th>AS&nbsp;↑</th><th>TD&nbsp;↑</th><th>RC&nbsp;↑</th><th>SR&nbsp;↑</th><th>CS&nbsp;↓</th>
-            </tr></thead>
-            <tbody>
-              <tr><td>TIRL-SAC</td><td>TR-C'22</td><td>0.45</td><td>1.49</td><td>0.01</td><td>0.00</td><td>0.29</td></tr>
-              <tr><td>Chen-SAC</td><td>T-ITS'22</td><td class="best">24.32</td><td>162.01</td><td>0.49</td><td>0.50</td><td>16.04</td></tr>
-              <tr><td>ASAP</td><td>RSS'23</td><td>11.53</td><td>25.00</td><td>0.12</td><td>0.00</td><td>7.07</td></tr>
-              <tr><td>ChatScene-PPO</td><td>CVPR'24</td><td>14.78</td><td>127.85</td><td>0.44</td><td>0.40</td><td>6.05</td></tr>
-              <tr><td>Revolve</td><td>ICLR'25</td><td>17.42</td><td>134.37</td><td>0.40</td><td>0.40</td><td>10.33</td></tr>
-              <tr><td>VLM-RL</td><td>TR-C'25</td><td>14.38</td><td>138.08</td><td>0.51</td><td>0.40</td><td>10.09</td></tr>
-              <tr class="ours"><td>DriveVLM-RL (ours)</td><td>This work</td><td>14.54</td><td class="best">186.59</td><td class="best">0.57</td><td class="best">0.57</td><td class="best">1.75</td></tr>
-            </tbody>
-          </table>
+        <div class="content has-text-justified">
+          <p>
+            Mean &plusmn; std over 3 seeds; best in <b>bold</b>. <b>AS</b>: avg. speed (km/h),
+            <b>RC</b>: route completion, <b>TD</b>: total distance (m), <b>CS</b>: collision speed (severity),
+            <b>CR</b>: collision rate, <b>ICT</b>: inter-collision time (steps), <b>DCF</b>: collisions/km,
+            <b>TCF</b>: collisions/1000 steps, <b>SR</b>: success rate, <b>AC</b>: avg. collisions.
+          </p>
         </div>
-        <p class="fig-caption">
-          Among methods that actually complete routes, DriveVLM-RL drives the farthest, completes the most of the
-          route, succeeds most often, and has the lowest collision severity. (Stationary reward-only baselines such
-          as VLM-RM / RoboCLIP are omitted here; see the paper for the full 12-method table.)
-        </p>
 
-        <h3 class="title is-5" style="margin-top:2rem;">Cross-town generalization (zero-shot, trained on Town02)</h3>
-        <div class="table-container">
-          <table class="table is-bordered is-striped results-table">
-            <thead><tr>
-              <th>Town</th><th>Method</th><th>RC&nbsp;↑</th><th>SR&nbsp;↑</th><th>CS&nbsp;↓</th>
-            </tr></thead>
-            <tbody>
-              <tr><td rowspan="3">Town01</td><td>ChatScene-PPO</td><td>0.33</td><td>0.30</td><td>4.87</td></tr>
-              <tr><td>VLM-RL</td><td>0.27</td><td>0.03</td><td>10.64</td></tr>
-              <tr class="ours"><td>DriveVLM-RL</td><td>0.21</td><td>0.03</td><td class="best">1.59</td></tr>
-              <tr><td rowspan="3">Town03</td><td>ChatScene-PPO</td><td>0.34</td><td>0.10</td><td>15.27</td></tr>
-              <tr><td>VLM-RL</td><td>0.28</td><td>0.07</td><td>18.20</td></tr>
-              <tr class="ours"><td>DriveVLM-RL</td><td class="best">0.38</td><td>0.10</td><td class="best">10.97</td></tr>
-              <tr><td rowspan="3">Town04</td><td>ChatScene-PPO</td><td>0.27</td><td>0.10</td><td>15.20</td></tr>
-              <tr><td>VLM-RL</td><td>0.18</td><td>0.17</td><td>8.54</td></tr>
-              <tr class="ours"><td>DriveVLM-RL</td><td>0.18</td><td>0.07</td><td class="best">3.57</td></tr>
-              <tr><td rowspan="3">Town05</td><td>ChatScene-PPO</td><td>0.29</td><td>0.07</td><td>8.02</td></tr>
-              <tr><td>VLM-RL</td><td>0.22</td><td>0.00</td><td>6.77</td></tr>
-              <tr class="ours"><td>DriveVLM-RL</td><td class="best">0.30</td><td>0.03</td><td class="best">3.57</td></tr>
-            </tbody>
-          </table>
+        <h3 class="title is-4">Training-phase comparison (CARLA Town 2, all 11 baselines)</h3>
+        <img src="./static/images/table1.png" alt="Training-phase comparison table"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            Full 12-method training-phase comparison (Table 1 in the paper). DriveVLM-RL attains the best route
+            completion, total distance, and training-time collision severity while remaining navigation-capable.
+            (Training-time CS is logged every step and is not directly comparable to the testing CS below.)
+          </p>
         </div>
-        <p class="fig-caption">
-          DriveVLM-RL attains the <b>lowest collision severity in every unseen town</b>, showing the learned safety
-          behavior generalizes rather than overfitting to the training town.
-        </p>
 
-        <img src="./static/images/towns.png" alt="CARLA towns" style="margin-top:1.5rem;"/>
-        <p class="fig-caption">CARLA towns used to evaluate cross-town generalization.</p>
+        <h3 class="title is-4" style="margin-top:2rem;">Testing-phase comparison (unseen Town 2 routes)</h3>
+        <img src="./static/images/table2.png" alt="Testing-phase comparison table"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            Full 12-method testing-phase comparison on unseen Town 2 routes (Table 2 in the paper). Among methods
+            that actually complete routes, DriveVLM-RL achieves the highest success rate and route completion, drives
+            the farthest, and keeps collision severity low.
+          </p>
+        </div>
 
-        <h3 class="title is-5" style="margin-top:2rem;">Extreme setting (no reward after collision)</h3>
-        <img src="./static/images/training_extreme_curves.png" alt="Extreme-setting training curves"/>
-        <p class="fig-caption">
-          With the explicit collision penalty removed (<i>R<sub>penalty</sub> = 0</i>), DriveVLM-RL still keeps the
-          lowest collision severity and highest success rate, indicating the dual-pathway semantic reward instills
-          safe behavior rather than relying on a hand-tuned penalty.
-        </p>
+        <h3 class="title is-4" style="margin-top:2rem;">Extreme setting (no reward after collision)</h3>
+        <img src="./static/images/training_extreme_curves_comparison.jpg" alt="Extreme-setting training curves"/>
+        <div class="content has-text-justified" style="margin-top:0.8rem;">
+          <p>
+            With the explicit collision penalty removed (<i>R<sub>penalty</sub> = 0</i>), DriveVLM-RL still keeps the
+            lowest collision severity and highest success rate, indicating the dual-pathway semantic reward instills
+            safe behavior rather than relying on a hand-tuned penalty.
+          </p>
+        </div>
+        <img src="./static/images/table3.png" alt="Extreme-setting results table (training)" style="margin-top:1rem;"/>
+        <img src="./static/images/table4.png" alt="Extreme-setting results table (testing)" style="margin-top:1.5rem;"/>
       </div>
     </div>
   </div>
@@ -329,7 +361,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{huang2026drivevlmrl,
+    <pre><code>@article{huang2026drivevlm,
   title   = {DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving},
   author  = {Huang, Zilin and Sheng, Zihao and Wan, Zhengyang and Qu, Yansong and You, Junwei and Jiang, Sicong and Chen, Sikai},
   journal = {arXiv preprint arXiv:2603.18315},
@@ -342,20 +374,27 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="https://arxiv.org/pdf/2603.18315"><i class="fas fa-file-pdf"></i></a>
-      <a class="icon-link" href="https://github.com/zilin-huang/DriveVLM-RL" class="external-link"><i class="fab fa-github"></i></a>
+      <a class="icon-link" href="https://arxiv.org/pdf/2603.18315">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/zilin-huang/DriveVLM-RL" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
             This website is licensed under a <a rel="license"
-              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
-              International License</a>.
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
-            project page. We thank the authors for releasing the source code.
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
           </p>
         </div>
       </div>
